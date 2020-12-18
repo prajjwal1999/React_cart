@@ -12,8 +12,20 @@
      }
      increaseQuantity=()=>{
          console.log(this.state);
+         //setstate
+         this.setState({
+             qty:this.state.qty+1
 
-     }
+         })
+    }
+    decreaseQuantity=()=>{
+        console.log(this.state);
+        //setstate
+        this.setState({
+            qty:this.state.qty-1
+
+        })
+    }
      render(){
          return (
              <div className="cart-item">
@@ -32,7 +44,12 @@
                         src="https://www.flaticon.com/svg/static/icons/svg/1828/1828919.svg"
                         onClick={this.increaseQuantity}
                         />
-                        <img alt="decrease" className="action-icons" src="https://www.flaticon.com/svg/static/icons/svg/1828/1828899.svg"/>
+                        <img
+                         alt="decrease" 
+                         className="action-icons" 
+                         src="https://www.flaticon.com/svg/static/icons/svg/1828/1828899.svg"
+                         onClick={this.decreaseQuantity}
+                         />
                         <img alt="delete" className="action-icons" src="https://www.flaticon.com/svg/static/icons/svg/565/565491.svg"/>
 
                      </div>
