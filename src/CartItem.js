@@ -10,6 +10,10 @@
 
          }
      }
+     increaseQuantity=()=>{
+         console.log(this.state);
+
+     }
      render(){
          return (
              <div className="cart-item">
@@ -22,7 +26,12 @@
                      <div style={{color:'#777'}}>Rs {this.state.price}</div>
                      <div style={{color:'#777'}}>Qty: {this.state.qty}</div>
                      <div className="cart-item-actions">
-                        <img alt="increase" className="action-icons" src="https://www.flaticon.com/svg/static/icons/svg/1828/1828919.svg"/>
+                        <img 
+                        alt="increase" 
+                        className="action-icons" 
+                        src="https://www.flaticon.com/svg/static/icons/svg/1828/1828919.svg"
+                        onClick={this.increaseQuantity}
+                        />
                         <img alt="decrease" className="action-icons" src="https://www.flaticon.com/svg/static/icons/svg/1828/1828899.svg"/>
                         <img alt="delete" className="action-icons" src="https://www.flaticon.com/svg/static/icons/svg/565/565491.svg"/>
 
