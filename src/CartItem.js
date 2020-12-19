@@ -1,4 +1,5 @@
  import React from 'react';
+
  class CartItems extends React.Component{
      constructor(){
          super();
@@ -32,6 +33,8 @@
         })
     }
      render(){
+         console.log('this props',this.props);
+         const { price, title, qty}=this.props.product;
          return (
              <div className="cart-item">
                  <div className="left-block">
@@ -39,9 +42,9 @@
 
                  </div>
                  <div className="right-block">
-                     <div style={{frontSize:25}}>{this.state.title}</div>
-                     <div style={{color:'#777'}}>Rs {this.state.price}</div>
-                     <div style={{color:'#777'}}>Qty: {this.state.qty}</div>
+                     <div style={{frontSize:25}}>{title}</div>
+                     <div style={{color:'#777'}}>Rs {price}</div>
+                     <div style={{color:'#777'}}>Qty: {qty}</div>
                      <div className="cart-item-actions">
                         <img 
                         alt="increase" 
